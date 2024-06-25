@@ -30,7 +30,7 @@ const Index = () => {
         </ul>
       </nav>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 overflow-hidden">
         {activeSection === 'pulse' && (
           <motion.div
             className="bg-white rounded-lg shadow-xl p-8 mb-8"
