@@ -11,9 +11,6 @@ const Index = () => {
     { id: 'scale', title: 'Scale Animation' },
     { id: 'slide', title: 'Slide Animation' },
     { id: 'bounce', title: 'Bounce Animation' },
-    { id: 'fade', title: 'Fade Animation' },
-    { id: 'flip', title: 'Flip Animation' },
-    { id: 'wobble', title: 'Wobble Animation' },
   ];
 
   return (
@@ -87,40 +84,6 @@ const Index = () => {
           >
             <h2 className="text-3xl font-bold mb-4 text-center text-blue-600">Bounce Animation</h2>
             <p className="text-gray-700 text-center">This element bounces up and down continuously.</p>
-          </motion.div>
-        )}
-
-        {activeSection === 'fade' && (
-          <motion.div
-            className="bg-white rounded-lg shadow-xl p-8 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center text-yellow-600">Fade Animation</h2>
-            <p className="text-gray-700 text-center">This element fades in and out continuously.</p>
-          </motion.div>
-        )}
-
-        {activeSection === 'flip' && (
-          <motion.div
-            className="bg-white rounded-lg shadow-xl p-8 mb-8"
-            animate={{ rotateY: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center text-teal-600">Flip Animation</h2>
-            <p className="text-gray-700 text-center">This element flips continuously, creating a dynamic visual effect.</p>
-          </motion.div>
-        )}
-
-        {activeSection === 'wobble' && (
-          <motion.div
-            className="bg-white rounded-lg shadow-xl p-8 mb-8"
-            animate={{ rotate: [0, -10, 10, -10, 10, 0] }}
-            transition={{ duration: 1, repeat: Infinity }}
-          >
-            <h2 className="text-3xl font-bold mb-4 text-center text-indigo-600">Wobble Animation</h2>
-            <p className="text-gray-700 text-center">This element wobbles continuously, adding a playful touch.</p>
           </motion.div>
         )}
       </div>
